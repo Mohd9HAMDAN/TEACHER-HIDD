@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>دليل تواصل الهيئة التعليمية - مدرسة الحد الابتدائية الإعدادية للبنين</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#14213d;--muted:#5b6678;--line:#dde3ec;--bg:#f4f6fa;--card:#fff;--red:#a3182f;--wa:#1fa855;--wa-dark:#168a45}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:"Tajawal",system-ui,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh}
+  header{background:var(--ink);color:#fff;padding:28px 20px 64px}
+  .wrap{max-width:680px;margin:0 auto}
+  header h1{margin:0;font-size:1.6rem;font-weight:800;line-height:1.35}
+  header p{margin:6px 0 0;color:#c4cde0}
+  .stripe{height:6px;width:64px;background:var(--red);border-radius:3px;margin-bottom:14px}
+  main{margin-top:-36px;padding:0 16px 40px}
+  .box{background:var(--card);border-radius:14px;box-shadow:0 6px 24px rgba(20,33,61,.14);padding:6px 16px;display:flex;align-items:center;gap:10px}
+  .box input{flex:1;border:0;outline:0;font:inherit;font-size:1.15rem;padding:14px 0;background:transparent;color:var(--ink);min-width:0}
+  .box:focus-within{outline:3px solid var(--red);outline-offset:2px}
+  .box svg{flex:none;color:var(--muted)}
+  .go{border:0;background:var(--red);color:#fff;font:inherit;font-weight:700;padding:10px 18px;border-radius:10px;cursor:pointer}
+  .msg{margin:12px 4px;color:var(--muted);font-size:.95rem}
+  .err{color:var(--red);font-weight:700}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 4px}
+  .chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:4px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+  .chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .info{flex:1 1 220px;min-width:0}
+  .name{font-weight:700;font-size:1.1rem}
+  .sub{color:var(--muted);font-size:.8rem}
+  .num{direction:ltr;unicode-bidi:embed;text-align:right;font-weight:500;font-size:1.05rem;margin-top:2px}
+  .actions{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border-radius:10px;font:inherit;font-weight:700;font-size:.95rem;text-decoration:none;border:0;cursor:pointer}
+  .btn:focus-visible,.go:focus-visible,.chip:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+  .wa{background:var(--wa);color:#fff}.wa:hover{background:var(--wa-dark)}
+  .call{background:#fff;color:var(--red);border:1.5px solid var(--red)}
+  .empty{display:block;text-align:center;color:var(--muted);border-style:dashed}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 16px 28px}
+  [hidden]{display:none!important}
+  @media (max-width:480px){.actions{width:100%}.btn{flex:1;justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="stripe"></div>
+<h1>مدرسة الحد الابتدائية الإعدادية للبنين</h1>
+<p>دليل التواصل مع الهيئة الإدارية والتعليمية</p></div></header>
+
+<main class="wrap">
+  <section id="app">
+    <label class="box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="اكتب اسم المعلم" autocomplete="off" aria-label="ابحث عن معلم">
+    </label>
+    <div class="msg" id="count" aria-live="polite"></div>
+    <ul id="list"></ul>
+  </section>
+</main>
+<footer>للاستخدام الداخلي للكادر الوظيفي فقط</footer>
+
+<script>
+const COUNTRY="973";
+const STAFF=[{"name": "راشد أحمد راشد الجبن", "section": "الهيئة الإدارية", "phone": "39277066", "phone2": "", "note": ""}, {"name": "وائل ربيع عبدالحميد الصعيدي", "section": "الرياضيات", "phone": "39586461", "phone2": "", "note": "معلم أول"}, {"name": "جمعه العيسوي العيسوي برطش", "section": "الهيئة الإدارية", "phone": "39257421", "phone2": "36710601", "note": ""}, {"name": "أحمد الزياني", "section": "الرياضيات", "phone": "33995199", "phone2": "", "note": ""}, {"name": "جعفر صالح حسان حسان", "section": "الهيئة الإدارية", "phone": "33733341", "phone2": "", "note": ""}, {"name": "السيد عبدالرحيم السيد حسن", "section": "الرياضيات", "phone": "36881891", "phone2": "", "note": ""}, {"name": "محمد جمعه محمد الخياط", "section": "الهيئة الإدارية", "phone": "33055937", "phone2": "", "note": ""}, {"name": "أشرف أحمد حسن الزغبي", "section": "الرياضيات", "phone": "33128828", "phone2": "", "note": ""}, {"name": "فهد محمد عبدالله السعدون", "section": "الهيئة الإدارية", "phone": "36759900", "phone2": "", "note": ""}, {"name": "رواف فضل معيدي العنزي", "section": "الرياضيات", "phone": "33732475", "phone2": "", "note": ""}, {"name": "محمد إبراهيم مبارك شريدة", "section": "الهيئة الإدارية", "phone": "39846064", "phone2": "", "note": ""}, {"name": "محمد مشبب محمد الشهراني", "section": "الرياضيات", "phone": "35969761", "phone2": "", "note": ""}, {"name": "محمد احمد عبدالرحمن العوضي", "section": "الهيئة الإدارية", "phone": "33667730", "phone2": "", "note": ""}, {"name": "عبدالله حسين جعفر السرح", "section": "الرياضيات", "phone": "39393551", "phone2": "", "note": ""}, {"name": "سلمان يوسف أحمد علي", "section": "الهيئة الإدارية", "phone": "35112324", "phone2": "", "note": ""}, {"name": "عبدالرحمن عارف عبدالرحمن البنكي", "section": "الرياضيات", "phone": "34426662", "phone2": "", "note": ""}, {"name": "درويش احمد درويش مرسي", "section": "الهيئة الإدارية", "phone": "34154227", "phone2": "", "note": ""}, {"name": "يوسف عاطف عبدالمجيد الفخري", "section": "الرياضيات", "phone": "37177667", "phone2": "", "note": ""}, {"name": "محمد عبدالعال أحمد عبدالعال", "section": "الهيئة الإدارية", "phone": "37288900", "phone2": "", "note": ""}, {"name": "مصطفى محمد علي عبدالفتاح", "section": "الرياضيات", "phone": "36646575", "phone2": "", "note": ""}, {"name": "يوسف أحمد محمد مرزوق", "section": "الهيئة الإدارية", "phone": "33258656", "phone2": "", "note": ""}, {"name": "عبدالرحمن حسن محمد الشاذلي", "section": "الرياضيات", "phone": "36336856", "phone2": "", "note": ""}, {"name": "عباس عبدالله حسن صياح", "section": "الهيئة الإدارية", "phone": "39128932", "phone2": "", "note": ""}, {"name": "عبدالعزيز خالد ابراهيم الحاكور", "section": "الرياضيات", "phone": "34640046", "phone2": "", "note": ""}, {"name": "أحمد سعود محسن الحشاش", "section": "الهيئة الإدارية", "phone": "33503358", "phone2": "", "note": ""}, {"name": "أحمد مهدي ملا أحمد", "section": "الرياضيات", "phone": "39964363", "phone2": "", "note": ""}, {"name": "عبدالله جمال مصطفى بوعلاي", "section": "الرياضيات", "phone": "33705007", "phone2": "", "note": ""}, {"name": "جاسم أحمد جاسم القلاف", "section": "التربية الإسلامية", "phone": "36507571", "phone2": "", "note": "منسق"}, {"name": "عمار ياسر سعيد اليعفري", "section": "الرياضيات", "phone": "33852699", "phone2": "", "note": ""}, {"name": "عبدالرحمن عادل ياسين الذوادي", "section": "التربية الإسلامية", "phone": "37991213", "phone2": "", "note": ""}, {"name": "يونس عبدالله محمد التعكري", "section": "الرياضيات", "phone": "34590099", "phone2": "", "note": ""}, {"name": "علي هشام علي بهزاد", "section": "التربية الإسلامية", "phone": "33056879", "phone2": "", "note": ""}, {"name": "عبدالله عبدالقادر شير محمد", "section": "الرياضيات", "phone": "33032895", "phone2": "", "note": ""}, {"name": "محمد صبحي محمد زايد", "section": "التربية الإسلامية", "phone": "39187129", "phone2": "36205657", "note": ""}, {"name": "جاسم محمد جاسم عبدالله", "section": "التربية الإسلامية", "phone": "34342850", "phone2": "", "note": ""}, {"name": "عمرو احمد احمد محمود", "section": "العلوم", "phone": "36221888", "phone2": "", "note": "منسق"}, {"name": "علي حسن جابر يوسف", "section": "التربية الإسلامية", "phone": "34035223", "phone2": "", "note": ""}, {"name": "اسامة عدنان محمد صالح", "section": "العلوم", "phone": "33166877", "phone2": "", "note": ""}, {"name": "محمد اسحاق محمد عبد الله حمدان", "section": "التربية الإسلامية", "phone": "66661005", "phone2": "", "note": ""}, {"name": "سامي زين سعيد العطيف", "section": "العلوم", "phone": "33377985", "phone2": "", "note": ""}, {"name": "احمد طارق ابراهيم سيف", "section": "التربية الإسلامية", "phone": "35541221", "phone2": "", "note": ""}, {"name": "ناصر صالح محمد اللحيان", "section": "العلوم", "phone": "35114961", "phone2": "", "note": ""}, {"name": "قاسم عبدالرب محسن يافعي", "section": "التربية الإسلامية", "phone": "39592735", "phone2": "", "note": ""}, {"name": "مجدي عبدالحميد عبدالعزيز علواني", "section": "العلوم", "phone": "36933387", "phone2": "", "note": ""}, {"name": "عبدالعزيز بن علي بن محمد الزري", "section": "التربية الإسلامية", "phone": "33232920", "phone2": "", "note": ""}, {"name": "أحمد متولي أحمد الجندي", "section": "العلوم", "phone": "37766376", "phone2": "", "note": ""}, {"name": "عبدالله إبراهيم الشيخي", "section": "العلوم", "phone": "34534912", "phone2": "", "note": ""}, {"name": "عبدالهادي عباس حسن سبت", "section": "اللغة العربية", "phone": "37773350", "phone2": "", "note": "معلم أول"}, {"name": "عبدالرحمن محمد القحطاني", "section": "العلوم", "phone": "34374014", "phone2": "", "note": ""}, {"name": "عبدالله عادل ياسين الذوادي", "section": "اللغة العربية", "phone": "39954431", "phone2": "", "note": ""}, {"name": "محمد رشيد علي رشيد", "section": "العلوم", "phone": "33276459", "phone2": "", "note": ""}, {"name": "شريف محمد رشدي محمد", "section": "اللغة العربية", "phone": "36729501", "phone2": "", "note": ""}, {"name": "عماد الدين عبداللطيف محمود", "section": "اللغة العربية", "phone": "34570225", "phone2": "", "note": ""}, {"name": "حسن محمد عبدالسلام الجديلي", "section": "اللغة الإنجليزية", "phone": "66332912", "phone2": "", "note": "منسق"}, {"name": "محمد حسن محمد الخطيب", "section": "اللغة العربية", "phone": "66306921", "phone2": "", "note": ""}, {"name": "بلال محمد سليمان مومني", "section": "اللغة الإنجليزية", "phone": "37764177", "phone2": "", "note": ""}, {"name": "محمد مكي حسن البقالي", "section": "اللغة العربية", "phone": "37745571", "phone2": "", "note": ""}, {"name": "معاذ إيهاب محمد حنفي", "section": "اللغة الإنجليزية", "phone": "36366168", "phone2": "", "note": ""}, {"name": "نضال سليمان جبر بني عيسى", "section": "اللغة العربية", "phone": "36060271", "phone2": "36505752", "note": ""}, {"name": "عبدالله احمد محمود حسنين", "section": "اللغة الإنجليزية", "phone": "36389700", "phone2": "", "note": ""}, {"name": "نايف محمد صالح العزاني", "section": "اللغة العربية", "phone": "37114994", "phone2": "", "note": ""}, {"name": "محمد حسني حامد محمد", "section": "اللغة الإنجليزية", "phone": "34573574", "phone2": "", "note": ""}, {"name": "شريف عبدالنبي محمود محمد", "section": "اللغة العربية", "phone": "34573381", "phone2": "", "note": ""}, {"name": "محمد الحسيني حمزة جاد", "section": "اللغة الإنجليزية", "phone": "39446510", "phone2": "", "note": ""}, {"name": "عبدالعزيز شكري علي ابراهيم طلحه", "section": "اللغة العربية", "phone": "33113616", "phone2": "", "note": ""}, {"name": "محمد عبدالرحمن محمد الدسوقي", "section": "اللغة الإنجليزية", "phone": "36020367", "phone2": "", "note": ""}, {"name": "عبدالسلام احمد محمد البكري", "section": "اللغة العربية", "phone": "33428473", "phone2": "", "note": ""}, {"name": "يوسف يعقوب يوسف تلفت", "section": "اللغة الإنجليزية", "phone": "66693699", "phone2": "", "note": ""}, {"name": "محمد بدر محمد حسن القوتي", "section": "اللغة العربية", "phone": "33090506", "phone2": "", "note": ""}, {"name": "جابر عبدالغني علي مرزوق", "section": "اللغة الإنجليزية", "phone": "36806653", "phone2": "", "note": ""}, {"name": "سام عبدالإله مانع العمري", "section": "اللغة العربية", "phone": "39005562", "phone2": "", "note": ""}, {"name": "محمد عزت محمود حماد", "section": "اللغة الإنجليزية", "phone": "37373262", "phone2": "", "note": ""}, {"name": "عبدالعزيز عبدالهادي الدوسري", "section": "اللغة العربية", "phone": "35642945", "phone2": "", "note": ""}, {"name": "جاسم علي جاسم العلي", "section": "اللغة الإنجليزية", "phone": "66673999", "phone2": "", "note": ""}, {"name": "احمد صفوت محمد عبدالنور", "section": "اللغة العربية", "phone": "32330089", "phone2": "", "note": ""}, {"name": "محمد جميل مهدي ابوالعرب", "section": "اللغة الإنجليزية", "phone": "36694407", "phone2": "", "note": ""}, {"name": "ابراهيم خليفة إبراهيم حمدان", "section": "اللغة العربية", "phone": "36694266", "phone2": "", "note": ""}, {"name": "محمد صلاح زهري عودة", "section": "اللغة الإنجليزية", "phone": "36621053", "phone2": "", "note": ""}, {"name": "محمد فايز محمد المعجون", "section": "اللغة العربية", "phone": "34611191", "phone2": "", "note": ""}, {"name": "إبراهيم عبدالفتاح سطوحي علي", "section": "اللغة الإنجليزية", "phone": "37166449", "phone2": "", "note": ""}, {"name": "عيسى حسين علي محمد", "section": "اللغة العربية", "phone": "33330904", "phone2": "", "note": ""}, {"name": "علي حسن علي احمد مبارك الحايكي", "section": "التربية الفنية", "phone": "39466400", "phone2": "", "note": "معلم أول"}, {"name": "طارق احمد عبدالعال عبدالرحمن", "section": "المواد الاجتماعية", "phone": "36109912", "phone2": "", "note": "منسق"}, {"name": "احمد عاطف عبدالعزيز عبدالله", "section": "التربية الفنية", "phone": "33445789", "phone2": "", "note": ""}, {"name": "ناصر خالد بطي السويدي", "section": "المواد الاجتماعية", "phone": "38019991", "phone2": "", "note": ""}, {"name": "محمود محمد محمود جمعه", "section": "التربية الفنية", "phone": "37288900", "phone2": "", "note": ""}, {"name": "محمود عبدالرحمن متولي المسحر", "section": "المواد الاجتماعية", "phone": "36283712", "phone2": "", "note": ""}, {"name": "ايهاب محمد عبدالفتاح محمد", "section": "التربية الفنية", "phone": "36670058", "phone2": "", "note": ""}, {"name": "إبراهيم عبدالمجيد العوضي", "section": "المواد الاجتماعية", "phone": "34144674", "phone2": "", "note": ""}, {"name": "محمد صالح محمد نافع", "section": "المواد الاجتماعية", "phone": "33276992", "phone2": "", "note": ""}, {"name": "هشام عبدالله يوسف عبدالله", "section": "التربية الموسيقية", "phone": "36944410", "phone2": "", "note": ""}, {"name": "عبدالعزيز إبراهيم فهد الهنيدي", "section": "المواد الاجتماعية", "phone": "34666522", "phone2": "", "note": ""}, {"name": "سعود عبدالعزيز عبدالله بهلول", "section": "المواد الاجتماعية", "phone": "34155598", "phone2": "", "note": ""}, {"name": "محمد محمود عبده رسلان", "section": "التصميم والتقانة", "phone": "37156685", "phone2": "", "note": ""}, {"name": "اسماعيل محمد عبدالله الحماد", "section": "المواد الاجتماعية", "phone": "33372007", "phone2": "", "note": ""}, {"name": "اشرف علي حسن الطوالبه", "section": "التصميم والتقانة", "phone": "37129119", "phone2": "", "note": ""}, {"name": "يوسف عيسى احمد العرادي", "section": "المواد الاجتماعية", "phone": "37776202", "phone2": "", "note": ""}, {"name": "يوسف محمد جاسم مسامح", "section": "المواد الاجتماعية", "phone": "36550345", "phone2": "", "note": ""}, {"name": "فواز مبارك سالم الدوسري", "section": "التربية الزراعية", "phone": "34122868", "phone2": "", "note": ""}, {"name": "عبدالحسين يوسف حسن", "section": "المواد الاجتماعية", "phone": "36084333", "phone2": "", "note": ""}, {"name": "اشرف داود سليمان كركر", "section": "المجالات العملية", "phone": "36199688", "phone2": "", "note": ""}, {"name": "علي عبدالنبي علي بوسهيل", "section": "التربية الرياضية", "phone": "33556569", "phone2": "", "note": "معلم أول"}, {"name": "اشرف سعد عبدالمنعم البسيوني", "section": "المجالات العملية", "phone": "37158661", "phone2": "", "note": ""}, {"name": "خالد احمد صالح بودلامة", "section": "التربية الرياضية", "phone": "34090709", "phone2": "", "note": ""}, {"name": "جاسم محمد عبدالله اضرابوه", "section": "التربية الرياضية", "phone": "37770658", "phone2": "", "note": ""}, {"name": "عبدالنبي نجار ابوالسعود علي", "section": "الحاسب الآلي", "phone": "37193177", "phone2": "", "note": "منسق"}, {"name": "محمد فيصل ابراهيم البصري", "section": "التربية الرياضية", "phone": "33278290", "phone2": "", "note": ""}, {"name": "علاء علي طه عبدالرزاق", "section": "الحاسب الآلي", "phone": "33331154", "phone2": "", "note": ""}, {"name": "امير حسين اسد علي", "section": "التربية الرياضية", "phone": "32277547", "phone2": "", "note": ""}, {"name": "محمود محمد رزق فرج", "section": "الحاسب الآلي", "phone": "36580550", "phone2": "", "note": ""}, {"name": "حمد محمد خميس زويد", "section": "التربية الرياضية", "phone": "33476335", "phone2": "", "note": ""}, {"name": "محمد حسين محمود الشروف", "section": "الحاسب الآلي", "phone": "36753365", "phone2": "", "note": ""}, {"name": "يوسف احمد محمد قازاني", "section": "الحاسب الآلي", "phone": "36969629", "phone2": "", "note": ""}, {"name": "محمد محمد عبدالعزيز ابراهيم", "section": "صعوبات التعلم + تفوق وموهبة", "phone": "34501959", "phone2": "", "note": ""}, {"name": "عبدالله محمد عيسى عجلان", "section": "الحاسب الآلي", "phone": "33707375", "phone2": "", "note": ""}, {"name": "احمد محمد محمد عبله", "section": "صعوبات التعلم + تفوق وموهبة", "phone": "38320360", "phone2": "", "note": ""}, {"name": "بدر عبدالرحمن عبدالله الباحوث", "section": "صعوبات التعلم + تفوق وموهبة", "phone": "37609099", "phone2": "", "note": ""}, {"name": "احمد محمد ابو اعلا غانم", "section": "التربية الأسرية", "phone": "36416382", "phone2": "", "note": ""}, {"name": "سعيد فاروق محمد الاكحل", "section": "التربية الأسرية", "phone": "36717893", "phone2": "", "note": ""}, {"name": "عيسى خالد حسن رشدان", "section": "التربية الأسرية", "phone": "39777632", "phone2": "", "note": ""}, {"name": "نايف عبدالرحمن عبدالعزيز المحميد", "section": "التربية الأسرية", "phone": "36851852", "phone2": "", "note": ""}, {"name": "عمار هشام إبراهيم العريفان", "section": "التربية الأسرية", "phone": "36121715", "phone2": "", "note": ""}];
+
+function norm(s){
+  return (s||"").toString().replace(/[\u064B-\u065F\u0670\u0640]/g,"")
+   .replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").replace(/ؤ/g,"و").replace(/ئ/g,"ي").toLowerCase().trim();
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const full=p=>{let d=(p||"").replace(/\D/g,"");return d.length<=8?COUNTRY+d:d;};
+const pretty=p=>"+"+COUNTRY+" "+p.slice(-8,-4)+" "+p.slice(-4);
+
+function actions(p){
+  const n=full(p);
+  return '<a class="btn wa" href="https://wa.me/'+n+'" target="_blank" rel="noopener" aria-label="واتساب '+p+'">واتساب</a>'+
+         '<a class="btn call" href="tel:+'+n+'">اتصال</a>';
+}
+function render(){
+  const terms=norm(document.getElementById("q").value).split(/\s+/).filter(Boolean);
+  const rows=STAFF.filter(t=>terms.every(w=>norm(t.name).includes(w)));
+  document.getElementById("count").textContent=terms.length?("النتائج: "+rows.length):("إجمالي العاملين: "+STAFF.length);
+  const list=document.getElementById("list");
+  if(!rows.length){list.innerHTML='<li class="empty">لا توجد نتائج. جرّب كتابة جزء من الاسم فقط.</li>';return;}
+  list.innerHTML=rows.map(t=>{
+    let h='<li><div class="info"><div class="name">'+esc(t.name)+'</div>'+
+      '<div class="sub">'+esc(t.section)+(t.note?' - '+esc(t.note):'')+'</div>'+
+      '<div class="num">'+esc(pretty(t.phone))+'</div>'+
+      (t.phone2?'<div class="num">'+esc(pretty(t.phone2))+'</div>':'')+'</div>'+
+      '<div class="actions">'+actions(t.phone)+'</div></li>';
+    return h;
+  }).join("");
+}
+document.getElementById("q").addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
